@@ -99,7 +99,7 @@ const MoviesContainer = () => {
                 setError={setError}
             />
             {showSpinner ? <Loader /> : null}
-            <div className={'container min-width-fit-content bg-black px-0 ' + (showSpinner || error ? 'opacity-25 pe-none' : "")}>
+            <div className={'container max-width-100vw bg-black px-0 ' + (showSpinner || error ? 'opacity-25 pe-none' : "")}>
                 <div className="h1 text-center text-white">Movies List</div>
                 <RenderFilters
                     setYear={setYear}
