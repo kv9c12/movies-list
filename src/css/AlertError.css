@@ -1,0 +1,5 @@
+.alert-container {
+  top: 5vh;
+  z-index: 5;
+  left: 25vw;
+}
