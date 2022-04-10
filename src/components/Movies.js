@@ -6,7 +6,7 @@ export const RenderMovies = ({ movies = [], year = 0, rating = 0, toggleModal = 
         return (
             <div className='col-xd-3 col-md-3 col-sm-6 col-xs-12 d-flex' onClick={() => toggleModal(movie.id)} key={index}>
                 <div className='card px-0 my-2 border-0 w-100' key={index}>
-                    <img src={movie.poster_path ? ("https://www.themoviedb.org/t/p/original" + movie.poster_path) : "https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg"} alt="img" height="500vh" className="rounded" />
+                    <img key={index} src={movie.poster_path ? ("https://www.themoviedb.org/t/p/original" + movie.poster_path) : "https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg"} alt="img" height="500vh" className="rounded" />
                     <div className='card-body bg-dark text-white'>
                         <div className="card-title text-warning text-center h5">
                             {movie?.title || ""} &nbsp;

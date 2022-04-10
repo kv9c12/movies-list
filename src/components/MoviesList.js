@@ -99,7 +99,7 @@ const MoviesContainer = () => {
                 setError={setError}
             />
             {showSpinner ? <Loader /> : null}
-            <div className={'container min-width-fit-content ' + (showSpinner || error ? 'opacity-25 pe-none' : "")}>
+            <div className={'container min-width-fit-content bg-black px-0 ' + (showSpinner || error ? 'opacity-25 pe-none' : "")}>
                 <div className="h1 text-center text-white">Movies List</div>
                 <RenderFilters
                     setYear={setYear}
@@ -109,16 +109,16 @@ const MoviesContainer = () => {
                     year={year}
                 />
                 <div className={'row mx-2'}>
+                    {year === "All" && !rating && movies.length ? <RenderPaginationActions
+                        currPage={currPage}
+                        pageAction={pageAction}
+                    /> : null}
                     <RenderMovies
                         movies={movies}
                         year={year}
                         rating={rating}
                         toggleModal={toggleModal}
                     />
-                    {year === "All" && !rating && movies.length ? <RenderPaginationActions
-                        currPage={currPage}
-                        pageAction={pageAction}
-                    /> : null}
                 </div>
 
             </div>
