@@ -18,7 +18,6 @@ export const RenderFilters = ({ years = [], setYear = () => { }, setSearchText =
         setYear(e.target.value.toString());
     }
 
-    console.log("year: ", year, typeof year)
     let [searchText, setSearch] = useState("");
     let [rating, setRating] = useState(0);
 

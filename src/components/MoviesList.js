@@ -41,6 +41,7 @@ const MoviesContainer = () => {
 
     useEffect(() => {
         GetMovies();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {
@@ -67,11 +68,13 @@ const MoviesContainer = () => {
         setPage(1);
         setYear("All");
         setSpinner(true);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [searchText])
 
     useEffect(() => {
         setSpinner(true);
         GetMovies();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currPage]);
 
     const toggleModal = (id = 0) => {
@@ -124,10 +127,7 @@ const MoviesContainer = () => {
                 showModal={showModal}
                 title={movieDetails.title}
                 overview={movieDetails.overview}
-                hideModal={() => {
-                    console.log("Close modal")
-                    setShowModal(false)
-                }}
+                hideModal={() => setShowModal(false)}
             />}
 
         </div>

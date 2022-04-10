@@ -17,5 +17,5 @@ export const RenderMovies = ({ movies = [], year = 0, rating = 0, toggleModal = 
                 </div>
             </div>
         )
-    }) : [<div className="text-white text-center h5">No Results Found</div>]
+    }) : [<div className="text-white text-center h5" key={0}>No Results Found</div>]
 }
